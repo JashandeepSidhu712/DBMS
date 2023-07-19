@@ -62,4 +62,39 @@ A Database Management System (DBMS) is a software application or system that fac
 
 It serves as an interface between users or applications and the underlying database, providing efficient and secure access to data. <br> The primary goal of a DBMS is to ensure data integrity, consistency, and efficiency in data storage and retrieval operations.
 
+## DATABASE ADMINISTRATOR
+
+A Database Administrator (DBA) is a professional responsible for the design, implementation, maintenance, and security of a database management system (DBMS) within an organization. <br>
+DBAs play a crucial role in ensuring that the database infrastructure runs efficiently, securely, and meets the data management needs of the organization.
+
+Functions of Database Administrator
+
+**1. Database Design**: DBAs participate in the design phase of a database, helping to create the database schema, defining tables, columns, relationships, and data constraints to ensure data integrity. <br>
+**2. Database Installation and Configuration**: DBAs are responsible for installing and configuring the DBMS software, setting up database instances, and managing system parameters for optimal performance. <br>
+**3. Data Security**: DBAs implement security measures to protect sensitive data from unauthorized access. They manage user access rights, roles, and permissions to control data access. <br>
+**4. Data Backup and Recovery**: DBAs design and implement backup and recovery strategies to ensure data can be restored in case of data loss, system failures, or disasters. <br>
+**5. Database Performance Tuning**: DBAs monitor database performance, identify bottlenecks, and optimize queries, indexes, and database configurations for improved performance. <br>
+**6. Database Maintenance**: DBAs perform routine maintenance tasks such as data archiving, index rebuilding, and database reorganization to keep the database running smoothly. <br>
+**7. Database Monitoring**: DBAs continuously monitor the database for issues, errors, and performance metrics to proactively address potential problems. <br>
+**8. Database Upgrades and Patches**: DBAs manage database upgrades and apply patches to ensure the DBMS is running with the latest features and security fixes. <br>
+**9. Data Migration**: DBAs plan and execute data migrations between different database systems or versions, ensuring data integrity during the process.<br>
+**10. Database Documentation**: DBAs maintain documentation related to the database design, configurations, and procedures for reference and compliance. <br>
+
+Database Administrators work closely with developers, system administrators, and business stakeholders to ensure that the database meets the organization's needs and supports its applications effectively. 
+
+## HOW IS DATABASE ACCESSED FROM APPLICATION PROGRAMS?
+
+**Database Connectivity APIs** <br>
+DBMS vendors provide Database Connectivity APIs that allow application programs to interact with the database using standard programming languages. <br>
+The most widely used API is the ODBC (Open Database Connectivity) for relational databases, which provides a vendor-neutral way to access various DBMSs. Other common APIs include JDBC (Java Database Connectivity) for Java applications and ADO.NET for .NET applications.
+
+**Embedded SQL or SQL APIs** <br>
+Embedded SQL allows SQL statements to be directly embedded within the application code. The application program contains SQL queries or statements written in the programming language (e.g., C, C++, COBOL, etc.), and these queries are preprocessed and executed by the DBMS during runtime. This approach is especially common in legacy applications and systems.
+
+**Steps involved in accessing a database from an application program** are as follows: <br>
+1. Establishing a Connection
+2. Sending SQL Queries
+3. Query Execution
+4. Handling Results
+5. Closing the Connection
 
