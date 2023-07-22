@@ -99,10 +99,26 @@ Consider two tables, "Orders" and "Customers," <br>
 ![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/4ba9463d-73a9-4c6e-aa68-6259e0c09a26) <br>
 "CustomerID" in the "Orders" table acts as a foreign key, linking each order to the corresponding customer in the "Customers" table. The foreign key ensures that every "CustomerID" in the "Orders" table matches an existing "CustomerID" in the "Customers" table.
 
+## 8. COMPOUND KEY
+In a database management system (DBMS), a compound key is a type of key that consists of **two or more attributes (columns) combined together to uniquely identify each record (row) in a table**.
 
+Compound key is sometimes used interchangeably with the term "composite key." However, in some contexts, "composite key" specifically refers to a compound key that is part of a primary key or a unique key, while "compound key" can be any key formed by the combination of attributes.
 
+## 9. SURROGATE KEY
+In a database management system (DBMS), a surrogate key is an **artificially generated unique identifier used as the primary key for a table**.
+
+Unlike natural keys, surrogate keys do not carry any meaningful information about the data they identify. They are used solely for database management purposes.
+
+## 10. NATURAL KEYS
+A natural key is a key in a database derived from meaningful business data already present in the real world. <br>
+It carries inherent meaning and relevance to the entity it represents.<br>
+Natural keys are often used as primary keys in tables.
 
 
   ## CONSTRAINTS
 Constraints are **rules or conditions applied to the data in a database table to maintain data integrity and ensure data consistency**. Constraints are used to enforce business rules and prevent the insertion of invalid or inconsistent data. 
+
+## SUMMARY
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/bb924fab-1f01-492a-aeca-9fccff3e9b51)
 
