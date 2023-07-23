@@ -12,7 +12,7 @@ The ER model provides a **high-level representation of data requirements**. Duri
 ## ENTITY
 Entities represent **real-world objects or concepts that we want to store information about in the database**.
 
-Entities are the core building blocks of a database and are used to organize and classify data. Each entity corresponds to a table in the relational database model, where each row in the table represents a specific instance or occurrence of that entity.
+Entities are the core building blocks of a database and are **used to organize and classify data**. Each entity corresponds to a table in the relational database model, where each row in the table represents a specific instance or occurrence of that entity.
 
 **STRONG ENTITY**<br>
 A strong entity is an entity that exists independently and has its attributes. It can be identified uniquely without relying on other entities.
@@ -23,9 +23,14 @@ A weak entity is an entity that cannot be uniquely identified without the help o
 **ASSOCIATIVITY ENTITY** <br>
 Also known as a "Bridge Entity" or "Junction Entity," an associative entity is used to represent a many-to-many relationship between two other entities. It contains attributes that are specific to the relationship between the two entities.
 
+## ENTITY SET
+An entity set is a **collection of similar entities that share the same attributes**. It represents a **logical grouping of entities based on common characteristics**. An entity set is the set of all instances (individual occurrences) of a particular entity type.
+
+The entity sets allow us to organize and manage the data efficiently, making it easier to represent the relationships between books and authors in the library database.
+
 ## ATTRIBUTES
 An attribute is a fundamental building block used to **describe the properties or characteristics of an entity**. 
 
-An attribute represents a specific piece of data associated with an entity and provides information about that entity. In other words, it defines what kind of data can be stored for each instance of the entity.
+An attribute represents a specific piece of data associated with an entity and **provides information about that entity**. In other words, it defines what kind of data can be stored for each instance of the entity.
 
 
