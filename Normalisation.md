@@ -85,20 +85,58 @@ To convert this table to 2NF, we split it into two separate tables: one for empl
 The Employee ID serves as the primary key in the Employee table and is used as a foreign key in the Skill table to establish the relationship between the two. By doing so, we have eliminated the partial dependency and achieved the Second Normal Form (2NF).
 
 ## THIRD NORMAL FORM
+To be in the Third Normal Form (3NF), a table must first be in 2NF and eliminate transitive dependencies. Transitive dependencies occur when an attribute depends on another non-key attribute rather than directly on the primary key.
+
+In the current table, we can see that "Employee Name" depends only on the "Employee ID," which is the primary key. However, there is also a dependency between "Skill" and "Employee Name." "Skill" depends on "Employee ID," and "Employee Name" depends on "Employee ID," which creates a transitive dependency.
+
+To convert this table to 3NF, we further split it into three separate tables: one for employee information, one for skills, and one for the relationship between skills and employees. We use foreign keys to establish the relationships.
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/1befa5aa-fda7-4c97-95dd-90ccb19a8a26)
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/08bd0c7d-3000-4850-9c21-5c880e860cf9)
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/dda383aa-8a4d-4660-9eb2-fb8ab8386610)
+
+The Employee ID is the primary key in the Employee table, the Skill ID is the primary key in the Skill table, and the Employee ID and Skill ID together form the composite primary key in the Employee-Skill Relationship table. By doing this, we have eliminated the transitive dependency and achieved the Third Normal Form (3NF).
 
 ## BOYCE CODD NORMAL FORM
+To be in Boyce-Codd Normal Form (BCNF), a table must first be in 3NF and satisfy an additional requirement related to functional dependencies.
+
+In the current table, all functional dependencies are satisfied, and there are no partial or transitive dependencies. Therefore, the table is in the Third Normal Form (3NF).
+
+To convert this table to Boyce-Codd Normal Form (BCNF), we examine the functional dependencies and ensure that every determinant is a candidate key.
+
+Functional Dependencies: <br>
+Employee ID → Employee Name (Candidate Key: Employee ID)
+Skill ID → Skill (Candidate Key: Skill ID)
+
+Since all the functional dependencies have candidate keys as determinants, the table is already in Boyce-Codd Normal Form (BCNF). It satisfies the requirements of 3NF and has no non-trivial functional dependencies on attributes that are not part of the candidate keys. Hence, it is in BCNF.
 
 ## FOURTH NORMAL FORM
+To be in the Fourth Normal Form (4NF), a table must first be in BCNF and eliminate multi-valued dependencies.
+
+In the current table, there are multi-valued dependencies between Employee ID and Skill ID, as each employee can have multiple skills, and each skill can be associated with multiple employees.
+
+To convert this table to Fourth Normal Form (4NF), we split the table into two separate tables, one for employee skills and another for skill employees. We use primary keys and foreign keys to establish relationships.
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/db633c34-0661-48bd-b2c8-7bd80d7563fc)
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/f4d957b7-e3b3-483b-90df-ef8fba0c4c59)
+
+Now, we have two separate tables with no multi-valued dependencies. Each table represents a distinct relationship, and each attribute depends on the primary key of its respective table.
 
 ## FIFTH NORMAL FORM
+To achieve the Fifth Normal Form (5NF) for a table, it must first be in Fourth Normal Form (4NF) and eliminate join dependencies.
 
+In the current tables, there are join dependencies between Employee-Skill Table and Skill-Employee Table. To be in Fifth Normal Form (5NF), we split the tables even further and create three separate tables: Employee Table, Skill Table, and Employee-Skill Relationship Table.
 
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/d619148f-025b-4947-aec2-2ff73b940510)
 
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/4d1a05cc-c67e-4968-9fe6-4886904728d5)
 
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/529ebc32-9f8f-4620-bd1a-ea0b2ac81961)
 
-
-
-
+Now, each table contains a distinct set of information, and there are no join dependencies between them. Each table represents a single entity and maintains data integrity without redundant data or functional dependencies.
 
 ## PERFORMANCE IMPLICATION OF NORMALISATION
 
