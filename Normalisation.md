@@ -60,6 +60,37 @@ Meet all the conditions of 4NF. <br>
 Eliminate join dependencies, ensuring that all join dependencies are implied by candidate keys. <br>
 
 
+## EXAMPLE TABLE
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/bb64c846-70dc-4773-bc6d-aebf2f7e0ccf)
+
+## FIRST NORMAL FORM
+"Skills" column contains multiple values separated by commas, which violates the 1NF requirement of atomic values.
+
+To convert this table to 1NF, we need to split the multi-valued attribute into separate rows and introduce a primary key for uniqueness.
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/e7ecb740-ca4c-4b57-826a-a4df7484a2da)
+
+## SECOND NORMAL FORM
+To be in the Second Normal Form (2NF), a table must first be in 1NF and must eliminate partial dependencies. Partial dependencies occur when an attribute depends on only a part of the primary key.
+
+In the current table, we have a composite primary key consisting of both Employee ID and Skill since Employee ID can be repeated, but the combination of Employee ID and Skill makes each row unique.
+
+However, we can see that the attribute "Employee Name" depends only on "Employee ID" and not on the entire composite primary key. This is a partial dependency and violates the Second Normal Form (2NF).
+
+To convert this table to 2NF, we split it into two separate tables: one for employee information and another for skills. We use a **foreign key** to establish a relationship between the tables.
+
+![image](https://github.com/JashandeepSidhu712/DBMS/assets/117754690/4addb738-eaf7-4225-92bb-e22f8da5d6b6)
+
+The Employee ID serves as the primary key in the Employee table and is used as a foreign key in the Skill table to establish the relationship between the two. By doing so, we have eliminated the partial dependency and achieved the Second Normal Form (2NF).
+
+## THIRD NORMAL FORM
+
+## BOYCE CODD NORMAL FORM
+
+## FOURTH NORMAL FORM
+
+## FIFTH NORMAL FORM
 
 
 
